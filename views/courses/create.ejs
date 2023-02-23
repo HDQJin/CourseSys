@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/public/css/style.css">
-    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="/public/css/course-create.css">
     <title>Login | HOWA - Course Register</title>
 </head>
 <header class="header" id="top">
-    <div class="w3-top">
         <div class="w3-top">
             <div class="w3-bar w3-black w3-card header">
               <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -37,22 +36,55 @@
           </div>
 </header>
 <body>
-    <div class="login-center">
-        <h1>Login</h1>
+    <div class="course-center">
+        <h1>Create a Course</h1>
         <form method="post">
             <div class="text-field">
-                <input type="text" required="">
+                <input type="text" name="course-name" required="">
                 <span></span>
-                <label>Username</label>
+                <label>Course name</label>
             </div>
             <div class="text-field">
-                <input type="password" required="">
+                <input type="text" name="category" required="">
                 <span></span>
-                <label>Password</label>
+                <label>Category</label>
             </div>
-            <div class="forgot-pass"><a href="/views/auth/forgot.ejs">Forgot password?</a></div>
-            <input type="submit" value="Login">
-            <div class="sign-up-url">Not a member? <a href="/views/auth/forgot.ejs">Sign up</a></div>
+            <div class="text-field">
+                <input type="text" name="lecture" required="">
+                <span></span>
+                <label>Lecturer</label>
+            </div>
+            <div class="text-field">
+                <input type="text" name="description" required="">
+                <span></span>
+                <label>Description</label>
+            </div>
+            <div class="text-field">
+                <input type="number" required="" name="fee">
+                <span></span>
+                <label>Tuition fee</label>
+            </div>
+            <div class="text-field">
+                <input type="number" required="" name="quantity" min="1">
+                <span></span>
+                <label>Max students</label>
+            </div>
+            <div class="text-field date">
+                <label>Date</label>
+                <input type="date" required="" name="cdate"style="padding-left: 100px;">
+                <span></span> 
+            </div>
+            <div class="text-field time">
+                <label>Time</label>
+                <input type="time" required="" name="ctime"style="padding-left: 100px;">
+                <span></span>
+            </div>
+            <div class="text-field select">
+                <label>Select profile picture:</label>
+                <input type="file" required="" name="img" style="padding-left: 200px;" accept="image/*" >
+                <span></span>
+            </div>
+            <input type="submit" value="Create" style="margin-bottom: 20px; max-width: 300px; margin-left: 410px; margin-right: 410px;">
         </form>
     </div>
 </body>
